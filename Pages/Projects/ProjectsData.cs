@@ -26,5 +26,15 @@ public record ProjectsData
             LinkUrl = "https://exercism.org/profiles/obonn/solutions?order=newest_first",
             Platform = "C#, Javascript"
         },
+        new Project()
+        {
+            Id = 3,
+            ImgUrl = ".\\images\\projects\\Portfolio.JPG",
+            ImgAlt = "A screenshot of the home page for this portfolio. Links to the views at the top and a partial capture of Omar's selfie.",
+            Title = "Professional Portfolio",
+            Body = "This is where you are now! Click here to look under the hood at the code for this portfolio, through my Github.",
+            LinkUrl = "https://github.com/obonn1/RazorPortfolio",
+            Platform = "C#, HTML, Razor, Bootstrap"
+        }
     };
 }
