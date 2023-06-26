@@ -1,0 +1,34 @@
+﻿@model ProjectsModel
+@{
+    ViewData["Title"] = "Weather";
+}
+
+<div class="col">
+    <form class="form-inline" method="post">
+        <div class="input-group w-75">
+            <input asp-for="CityWeather" type="text" class="form-control mb-2 mr-sm-2" id="cityName" placeholder="City or Zip Code" />
+            <button type="submit" class="btn btn-primary mb-2" value="submit" asp-page-handler="SubmitWeather">Submit</button>
+        </div>
+    </form>
+</div>
+<div class="row">
+    @if (CurrentWeather.Data is null)
+    {
+        <p>See the current weather in any city!</p>
+    }
+    else
+    {
+        <p>
+            <h4 class="card-title">@CurrentWeather.Data.Location</h4>
+            <br />
+            <div class="card-body">
+                Temperature = @CurrentWeather.Data.Temperature
+                <br />
+                Humidity = @CurrentWeather.Data.Humidity
+                <br />
+                Condition = @CurrentWeather.Data.Condition
+
+            </div>
+        </p>
+    }
+</div>
