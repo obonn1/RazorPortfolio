@@ -12,21 +12,21 @@
     </form>
 </div>
 <div class="row">
-    @if (CurrentWeather.Data is null)
+    @if (Model.Weather is null)
     {
         <p>See the current weather in any city!</p>
     }
     else
     {
         <p>
-            <h4 class="card-title">@CurrentWeather.Data.Location</h4>
+            <h4 class="card-title">@Model.Weather.Location</h4>
             <br />
             <div class="card-body">
-                Temperature = @CurrentWeather.Data.Temperature
+                Temperature = @Model.Weather.Temperature
                 <br />
-                Humidity = @CurrentWeather.Data.Humidity
+                Humidity = @Model.Weather.Humidity
                 <br />
-                Condition = @CurrentWeather.Data.Condition
+                Condition = @Model.Weather.Condition
 
             </div>
         </p>

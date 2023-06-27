@@ -15,6 +15,7 @@ namespace RazorPortfolio.Pages
 
         [BindProperty]
         public string? CityWeather { get; set; }
+        public WeatherViewModel? Weather { get; set; }
 
         public async Task<IActionResult> OnPostSubmitWeather()
         {
@@ -23,7 +24,7 @@ namespace RazorPortfolio.Pages
                 return Page();
             };
 
-            CurrentWeather.Data = new WeatherViewModel(WeatherRequest.GetWeather(CityWeather).Result);
+            Weather = new WeatherViewModel(WeatherRequest.GetWeather(CityWeather).Result);
 
             return Page();
         }
