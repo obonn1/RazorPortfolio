@@ -1,4 +1,4 @@
-﻿namespace RazorPortfolio.Models
+﻿namespace RazorPortfolio.Weather
 {
     public class WeatherData
     {
@@ -17,8 +17,8 @@
         public WeatherViewModel(WeatherData data)
         {
             bool isUSA = data.location.country == "USA" || data.location.country == "United States of America";
-            Location = $"{data.location!.name}, " + (isUSA ? data.location.region : data.location.country); 
-            Temperature = isUSA ? $"{(data.current!.temperature * 9 / 5) + 32}\u00B0F" : $"{data.current!.temperature}\u00B0C";
+            Location = $"{data.location!.name}, " + (isUSA ? data.location.region : data.location.country);
+            Temperature = isUSA ? $"{data.current!.temperature * 9 / 5 + 32}\u00B0F" : $"{data.current!.temperature}\u00B0C";
             Humidity = data.current.humidity.ToString() + "%";
             Condition = data.current.weather_descriptions[0];
         }

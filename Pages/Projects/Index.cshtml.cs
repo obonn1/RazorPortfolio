@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorPortfolio.Classes;
-using RazorPortfolio.Models;
 using RazorPortfolio.Pages.Projects;
+using RazorPortfolio.Weather;
 
 namespace RazorPortfolio.Pages
 {
@@ -24,7 +24,7 @@ namespace RazorPortfolio.Pages
                 return Page();
             };
 
-            Weather = new WeatherViewModel(await WeatherRequest.GetWeather(CityWeather));
+            Weather = new WeatherViewModel(await WeatherService.GetWeather(CityWeather));
 
             return Page();
         }

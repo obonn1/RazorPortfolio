@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
-using RazorPortfolio.Models;
+using RazorPortfolio.Weather;
 using RestSharp;
 
 namespace RazorPortfolio.Classes
 {
-    public static class WeatherRequest
+    public static class WeatherService
     {
         public static async Task<WeatherData> GetWeather(string city)
         {
