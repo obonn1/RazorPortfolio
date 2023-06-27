@@ -24,7 +24,7 @@ namespace RazorPortfolio.Pages
                 return Page();
             };
 
-            Weather = new WeatherViewModel(WeatherRequest.GetWeather(CityWeather).Result);
+            Weather = new WeatherViewModel(await WeatherRequest.GetWeather(CityWeather));
 
             return Page();
         }
