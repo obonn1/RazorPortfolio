@@ -10,7 +10,7 @@ namespace RazorPortfolio.Models
         public string? ImgAlt { get; set; }
         public string? LinkUrl { get; set; }
         public string? Body { get; set; }
-        public string? Platform { get; set; }
+        public string? Keywords { get; set; }
 
     }
 }
